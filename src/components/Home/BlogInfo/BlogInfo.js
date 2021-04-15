@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 const BlogInfo = ({ blog }) => {
     const { title, img, background } = blog;
@@ -11,8 +11,10 @@ const BlogInfo = ({ blog }) => {
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit unde placeat eum pariatur tenetur.
-                </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    </Card.Text>
+                    <div className="btn-bg-color">
+                        <button className="btn text-white btn-style">LEARN MORE</button>
+                    </div>
                 </Card.Body>
             </Card>
         </div>

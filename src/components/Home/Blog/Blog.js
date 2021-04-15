@@ -1,4 +1,5 @@
 import React from 'react';
+import './Blog.css';
 import blog1 from '../../../images/blog1.JPG';
 import blog2 from '../../../images/blog2.JPG';
 import blog3 from '../../../images/blog3.JPG';
@@ -26,8 +27,8 @@ const Blog = () => {
     return (
         <div>
             <div className="margin text-center">
-                <h5>OUR BLOG</h5>
-                <h2>LATEST FROM BLOG</h2>
+                <h5 className="h5-color"><span className="color">OUR</span> BLOG</h5>
+                <h2 className="">LATEST FROM BLOG</h2>
             </div>
             <div className="d-flex justify-content-center">
                 <div className="row">
