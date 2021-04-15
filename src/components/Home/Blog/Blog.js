@@ -8,18 +8,15 @@ import BlogInfo from '../BlogInfo/BlogInfo';
 const blogData = [
     {
         title: "LIGHTS & MOTION NIGHT LIGHT",
-        img: blog1,
-        background: "color"
+        img: blog1
     },
     {
-        title: "LIGHTS & MOTION NIGHT LIGHT",
-        img: blog2,
-        background: "color"
+        title: "SURVIVE LONG BIKE ROAD TRIPS",
+        img: blog2
     },
     {
-        title: "LIGHTS & MOTION NIGHT LIGHT",
-        img: blog3,
-        background: "color"
+        title: "A BRIEF HISTORY OF BICYCLING",
+        img: blog3
     },
 ]
 
@@ -30,7 +27,7 @@ const Blog = () => {
                 <h5 className="h5-color"><span className="color">OUR</span> BLOG</h5>
                 <h2 className="">LATEST FROM BLOG</h2>
             </div>
-            <div className="d-flex justify-content-center">
+            <div className="width-maintain">
                 <div className="row">
                     {
                         blogData.map((blog, index) => <BlogInfo key={index} blog={blog}></BlogInfo>)

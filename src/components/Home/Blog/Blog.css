@@ -1,3 +1,18 @@
+.width-maintain{
+    width: 70%;
+    margin: 0 auto;
+}
 .color{
     color: #f60;
+}
+
+@media (max-width: 981px){
+    .width-maintain{
+        width: 80%;
+    }
+}
+@media (max-width: 575px){
+    .width-maintain{
+        width: 100%;
+    }
 }

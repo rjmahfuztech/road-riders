@@ -1,18 +1,17 @@
 import React from 'react';
 import Contact from '../Contact/Contact';
-import { Container } from 'react-bootstrap';
 import Header from '../Header/Header';
 import Blog from '../Blog/Blog';
+import Rider from '../Rider/Rider';
 
 const Home = () => {
     return (
-        <>
-            <Container>
-                <Header></Header>
-                {/* <Contact></Contact> */}
-                <Blog></Blog>
-            </Container>
-        </>
+        <div className="">
+            <Header></Header>
+            <Blog></Blog>
+            <Rider></Rider>
+            <Contact></Contact>
+        </div>
     );
 };
 
