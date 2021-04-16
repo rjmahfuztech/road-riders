@@ -23,9 +23,9 @@ const blogData = [
 const Blog = () => {
     return (
         <div>
-            <div className="margin text-center">
+            <div id="blog" className="margin text-center">
                 <h5 className="h5-color"><span className="color">OUR</span> BLOG</h5>
-                <h2 className="">LATEST FROM BLOG</h2>
+                <h2>LATEST FROM BLOG</h2>
             </div>
             <div className="width-maintain">
                 <div className="row">
