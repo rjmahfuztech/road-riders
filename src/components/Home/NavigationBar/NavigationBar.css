@@ -1,0 +1,16 @@
+.nav-style{
+    color: rgb(200, 232, 236) !important;
+    margin-right: 20px;
+}
+.nav-style:hover{
+    color: rgb(92, 110, 112) !important;
+}
+.nav-end{
+    margin-right: 60px;
+}
+
+@media (max-width: 1391px){
+    .nav-end{
+        margin-right: 20px;
+    }
+}

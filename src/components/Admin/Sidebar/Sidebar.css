@@ -1,0 +1,15 @@
+.sidebar-style ul li{
+    margin-bottom: 20px;
+}
+.sidebar-style ul li .icon{
+    margin-right: 10px;
+}
+.sidebar-style ul li .link{
+    text-decoration: none;
+    color: gray;
+    font-weight: 500;
+}
+.sidebar-style ul li .link:hover{
+    text-decoration: none;
+    color: rgb(31, 68, 146);
+}
