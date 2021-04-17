@@ -1,0 +1,11 @@
+.btn-action{
+    border: none;
+    border-radius: 10px;
+    color: red;
+}
+.btn-action:hover{
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: #fff;
+}

@@ -1,0 +1,32 @@
+/* .footer-section{
+    background-image: url('../../../images/footer-bg.png');
+    background-size: cover;
+} */
+.footer-section li{
+    padding-bottom: 10px;
+    list-style-type: none;
+}
+.footer-section li:hover{
+    color: rgb(3, 30, 102);
+}
+.footer-section .social-icon li{
+    display: inline;
+    margin-right: 10px;
+}
+.footer-section .social-icon li .icon{
+    width: 45px;
+    height: 45px;
+    border: 1px solid #1CC7C1;
+    padding: 10px;
+    border-radius: 50%;
+    color: #1CC7C1;
+}
+.footer-section .social-icon li .fb-icon{
+    background-color: #1CC7C1;
+    color: #fff;
+}
+.footer-section .social-icon li .icon:hover{
+    background-color: #1CC7C1;
+    color: #fff;
+    transition: 0.4s;
+}

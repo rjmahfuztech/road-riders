@@ -28,15 +28,23 @@ const Login = () => {
                     name: displayName,
                     email
                 };
+                setUserToken();
                 setLoggedInUser(signInUser);
-                history.replace(from);
-                console.log('ok', loggedInUser);
-
             }).catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage);
             });
     }
+
+    const setUserToken = () => {
+        firebase.auth().currentUser.getIdToken(true).then(function (idToken) {
+            sessionStorage.setItem('token', idToken);
+            history.replace(from);
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+
     return (
         <div className="text-center margin">
             <div className="btn-bg-color">

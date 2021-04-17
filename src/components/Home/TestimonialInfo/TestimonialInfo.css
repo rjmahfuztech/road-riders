@@ -1,0 +1,19 @@
+.testimonial-style{
+    box-shadow: 5px 5px 10px rgb(192, 186, 186);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 15px 5px;
+    transition: 0.3s;
+}
+.testimonial-style:hover{
+    box-shadow: 7px 7px 10px rgb(100, 109, 119);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 15px 5px;
+    
+}
+.testimonial-style img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}

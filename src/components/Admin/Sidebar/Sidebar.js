@@ -2,7 +2,7 @@ import React from 'react';
 import './Sidebar.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus, faClipboardList, faHome, faPlusSquare, faTh, faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import { faCartPlus, faClipboardList, faComment, faHome, faPlusSquare, faTh, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 const Sidebar = () => {
@@ -19,10 +19,10 @@ const Sidebar = () => {
                     <Link className="link" to="/bookingList"><FontAwesomeIcon className="icon" icon={faClipboardList} /> Book List</Link>
                 </li>
                 <li>
-                    <Link className="link" to="/review"><FontAwesomeIcon className="icon" icon={faClipboardList} /> Review</Link>
+                    <Link className="link" to="/review"><FontAwesomeIcon className="icon" icon={faComment} /> Review</Link>
                 </li>
                 <li>
-                    <Link className="link" to="/order"><FontAwesomeIcon className="icon" icon={faClipboardList} /> Order List</Link>
+                    <Link className="link" to="/orders"><FontAwesomeIcon className="icon" icon={faClipboardList} /> Order List</Link>
                 </li>
                 <li>
                     <Link className="link" to="/service"><FontAwesomeIcon className="icon" icon={faPlusSquare} /> Add Service</Link>

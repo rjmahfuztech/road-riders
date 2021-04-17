@@ -7,9 +7,9 @@ import Sidebar from '../Sidebar/Sidebar';
 const Admin = () => {
     return (
         <div className="row">
-            <div className="col-md-3">
+            {/* <div className="col-md-3">
                 <Sidebar></Sidebar>
-            </div>
+            </div> */}
             <div className="col-md-9">
                 {/* <Book></Book> */}
                 {/* <AddService></AddService> */}

@@ -2,8 +2,10 @@ import React from 'react';
 import Contact from '../Contact/Contact';
 import Header from '../Header/Header';
 import Blog from '../Blog/Blog';
-import Rider from '../Rider/Rider';
 import Service from '../Service/Service';
+import Testimonial from '../Testimonial/Testimonial';
+import OurCompany from '../OurCompany/OurCompany';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
     return (
@@ -11,8 +13,10 @@ const Home = () => {
             <Header></Header>
             <Service></Service>
             <Blog></Blog>
-            <Rider></Rider>
+            <OurCompany></OurCompany>
+            <Testimonial></Testimonial>
             <Contact></Contact>
+            <Footer></Footer>
         </div>
     );
 };

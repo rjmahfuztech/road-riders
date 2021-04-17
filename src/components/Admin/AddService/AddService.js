@@ -17,7 +17,9 @@ const AddService = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                if (data) {
+                    alert('Service added successfully')
+                }
             })
             .catch(error => {
                 console.error(error)
@@ -38,12 +40,13 @@ const AddService = () => {
 
     return (
         <div className="margin container">
-            <form className="" onSubmit={handleAddService}>
-                <div className="row">
-                    <div className="col-md-3">
-                        <Sidebar></Sidebar>
-                    </div>
-                    <div className="col-md-9">
+            <div className="row">
+                <div className="col-md-3">
+                    <Sidebar></Sidebar>
+                </div>
+                <div className="col-md-9">
+                    <form onSubmit={handleAddService}>
+                        <h2 className="mb-5">Add Service</h2>
                         <div className="row">
                             <div className="mb-3 col-md-4">
                                 <label className="form-label">Service Title</label>
@@ -55,7 +58,7 @@ const AddService = () => {
                             </div>
                             <div className="mb-3 col-md-4">
                                 <label className="form-label">Upload Image</label>
-                                <label for="file-style" className="text-center form-control">Select Image</label>
+                                <label htmlFor="file-style" className="text-center form-control">Select Image</label>
                                 <input type="file" id="file-style" onChange={handleChangeFile} className="d-none" />
                             </div>
                         </div>
@@ -70,9 +73,9 @@ const AddService = () => {
                                 <button type="submit" className="btn text-white btn-style">Submit</button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     );
 };
