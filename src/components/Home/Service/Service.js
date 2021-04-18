@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import ServiceInfo from '../ServiceInfo/ServiceInfo';
 
 const Service = () => {
@@ -6,8 +7,8 @@ const Service = () => {
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
-        .then(res => res.json())
-        .then(data => setServiceData(data));
+            .then(res => res.json())
+            .then(data => setServiceData(data));
     }, []);
 
     console.log(serviceData);
@@ -18,6 +19,11 @@ const Service = () => {
                 <h2>SERVICES WE PROVIDE</h2>
             </div>
             <div className="width-maintain">
+                <div className="text-center">
+                    {
+                        serviceData.length === 0 && <Spinner animation="border" variant="success" />
+                    }
+                </div>
                 <div className="row p-3">
                     {
                         serviceData.map((service, index) => <ServiceInfo key={index} service={service}></ServiceInfo>)

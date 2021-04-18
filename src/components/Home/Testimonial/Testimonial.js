@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import TestimonialInfo from '../TestimonialInfo/TestimonialInfo';
 
 
@@ -18,6 +19,11 @@ const Testimonial = () => {
                 <h2>WHAT OUR CLIENTS SAY</h2>
             </div>
             <div className="width-maintain">
+                <div className="text-center">
+                    {
+                        reviewData.length === 0 && <Spinner animation="border" variant="success" />
+                    }
+                </div>
                 <div className="row p-3">
                     {
                         reviewData.map(review => <TestimonialInfo key={review._id} review={review}></TestimonialInfo>)

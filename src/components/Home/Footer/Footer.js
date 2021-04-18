@@ -6,37 +6,37 @@ import { faFacebookF, faGooglePlusG, faTwitter } from '@fortawesome/free-brands-
 
 
 const services = [
-    { name: 'Emergency Dental Care', link: '/emergency' },
-    { name: 'Check Up', link: '/checkup' },
-    { name: 'Treatment of Personal Diseases', link: '/personal-treatment' },
-    { name: 'Tooth Extraction', link: 'tooth-extraction' },
-    { name: 'Check Up', link: '/checkup' },
-    { name: 'Check Up', link: '/checkup' },
-    { name: 'Check Up', link: '/checkup' }
+    { name: 'Bicycle accessories', link: '/' },
+    { name: 'Mountain cycle', link: '/' },
+    { name: 'Cycle accessories set', link: '/' },
+    { name: 'Cycle chainring', link: '/' },
+    { name: 'Cycle crank', link: '/' },
+    { name: 'Cycle chain', link: '/' },
+    { name: 'More', link: '/' }
 ]
 
-const oralHealth = [
-    { name: 'Emergency Dental Care', link: '/emergency' },
-    { name: 'Check Up', link: '/checkup' },
-    { name: 'Treatment of Personal Diseases', link: '/personal-treatment' },
-    { name: 'Tooth Extraction', link: 'tooth-extraction' },
-    { name: 'Check Up', link: '/checkup' },
-    { name: 'Check Up', link: '/checkup' },
-    { name: 'Check Up', link: '/checkup' }
+const ourProduct = [
+    { name: 'Bicycle accessories', link: '/' },
+    { name: 'Mountain cycle', link: '/' },
+    { name: 'Cycle accessories set', link: '/' },
+    { name: 'Cycle crank', link: '' },
+    { name: 'Cycle chain', link: '/' },
+    { name: 'Cycle chainring', link: '/' },
+    { name: 'Cycle break set', link: '/' }
 ]
 const ourAddress = [
-    { name: 'new York - 101010 Hudson', link: '//google.com/map' },
-    { name: 'Yards', link: '//google.com/map' },
+    { name: 'United State - 203902', link: '//google.com/map' },
+    { name: 'America', link: '//google.com/map' },
 ]
 
 const Footer = () => {
     return (
         <div>
-            <footer className="footer-section margin">
+            <footer className="container-fluid footer-section margin">
                 <div className="width-maintain">
                     <div className="row">
                         <FooterInfo key={1} title='Our Services' items={services}></FooterInfo>
-                        <FooterInfo key={2} title='Our Product' items={oralHealth}></FooterInfo>
+                        <FooterInfo key={2} title='Our Product' items={ourProduct}></FooterInfo>
                         <FooterInfo key={3} title='Our Address' items={ourAddress}>
                             <ul className="social-icon">
                                 <li><a href="//facebook.com"><FontAwesomeIcon className="icon fb-icon" icon={faFacebookF} /></a></li>
@@ -44,13 +44,14 @@ const Footer = () => {
                                 <li><a href="//twitter.com"><FontAwesomeIcon className="icon" icon={faTwitter} /></a></li>
                             </ul>
                             <div className="mt-5">
-                                <h6>Call Now</h6>
-                                <button className="button-gradient">+2025550295</button>
+                                <h5>Contact Us</h5>
+                                <p>Email: test@gmail.com</p>
+                                <p>Phone: +111 (019) 25184203</p>
                             </div>
                         </FooterInfo>
                     </div>
                     <div className="mt-5 text-center">
-                        <p>Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
+                        <p>Copyright {(new Date()).getFullYear()} By mahfuztech</p>
                     </div>
                 </div>
             </footer>

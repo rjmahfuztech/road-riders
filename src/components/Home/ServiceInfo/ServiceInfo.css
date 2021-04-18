@@ -1,6 +1,12 @@
 .service-info-card{
-    border: 1px solid #ddd;
+    box-shadow:  5px 5px 10px #ddd,
+                -5px -5px 10px #ddd;
+    border-radius: 10px;
     padding: 20px;
     margin: 15px 5px;
     cursor: pointer;
+    transition: 0.3s;
+}
+.service-info-card:hover{
+    box-shadow: none;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../Sheared/Sidebar/Sidebar';
 
 const AddAdmin = () => {
     const [adminInfo, setAdminInfo] = useState({});

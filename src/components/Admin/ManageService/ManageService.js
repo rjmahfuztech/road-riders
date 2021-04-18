@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './ManageService.css';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../Sheared/Sidebar/Sidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../Sheared/Sidebar/Sidebar';
 
 const AddReview = () => {
     const [reviewInfo, setReviewInfo] = useState({});

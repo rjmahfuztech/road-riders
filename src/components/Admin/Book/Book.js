@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 // import { useForm } from "react-hook-form";
 import { UserContext } from '../../../App';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../Sheared/Sidebar/Sidebar';
 import ProcessPayment from '../PaymentSystem/ProcessPayment/ProcessPayment';
 
 const Book = () => {

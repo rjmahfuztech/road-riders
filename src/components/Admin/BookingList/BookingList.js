@@ -1,16 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 import BookingListInfo from '../BookingListInfo/BookingListInfo';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../Sheared/Sidebar/Sidebar';
 
 const BookingList = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [bookingData, setBookingData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('http://localhost:5000/orderByEmail', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({email: loggedInUser.email})
+        })
             .then(res => res.json())
             .then(data => setBookingData(data));
-    }, []);
-    console.log(bookingData);
+    }, [loggedInUser.email]);
+
     return (
         <div className="container margin">
             <div className="row">
