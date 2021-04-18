@@ -17,11 +17,12 @@ import BookingList from './components/Admin/BookingList/BookingList';
 import OrderList from './components/Admin/OrderList/OrderList';
 import ManageService from './components/Admin/ManageService/ManageService';
 import AddReview from './components/Admin/AddReview/AddReview';
+
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-
+  
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
@@ -53,9 +54,9 @@ function App() {
           <PrivateRoute path="/book/:ById">
             <Book />
           </PrivateRoute>
-          <PrivateRoute path="/book">
+          {/* <PrivateRoute path="/book">
             <Book />
-          </PrivateRoute>
+          </PrivateRoute> */}
           <PrivateRoute path="/bookingList">
             <BookingList />
           </PrivateRoute>

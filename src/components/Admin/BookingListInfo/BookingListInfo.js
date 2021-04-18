@@ -3,6 +3,7 @@ import './BookingListInfo.css';
 
 const BookingListInfo = ({ book }) => {
     const { image, ServiceName, description } = book.OrderInfo;
+    
     return (
         <div className="col-md-6">
             <div className="order-info">
@@ -11,7 +12,7 @@ const BookingListInfo = ({ book }) => {
                         <img style={{ height: '70px' }} src={`data:image/jpeg;base64,${image.img}`} alt="" />
                     </div>
                     <div>
-                        <button>done</button>
+                        <span>Pending</span>
                     </div>
                 </div>
                 <h4>{ServiceName}</h4>

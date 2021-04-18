@@ -9,7 +9,7 @@ const OrderList = () => {
             .then(res => res.json())
             .then(data => setAllOrders(data));
     }, []);
-    console.log(allOrders);
+    
     return (
         <div className="margin container">
             <div className="row">
@@ -39,7 +39,13 @@ const OrderList = () => {
                                                     <td>{orders.email}</td>
                                                     <td>{orders.OrderInfo?.ServiceName}</td>
                                                     <td>{orders.paymentId}</td>
-                                                    <td><button>done</button></td>
+                                                    <td>
+                                                        <select className="form-select" aria-label="Default select example">
+                                                            <option value="Pending">Pending</option>
+                                                            <option value="On going">On going</option>
+                                                            <option value="Done">Done</option>
+                                                        </select>
+                                                    </td>
                                                 </tr>
                                             )
                                         }

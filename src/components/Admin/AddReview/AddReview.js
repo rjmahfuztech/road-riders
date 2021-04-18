@@ -29,7 +29,6 @@ const AddReview = () => {
     }
 
     const handleUploadImg = e => {
-        console.log(e.target.files[0]);
         const imageData = new FormData();
         imageData.set('key', '1a22bc8f0079d4bfb66019a7d15dda3e');
         imageData.append('image', e.target.files[0]);

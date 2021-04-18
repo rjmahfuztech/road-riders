@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import './NavigationBar.css';
 
 const NavigationBar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    const handleSingOut = () => {
+        setLoggedInUser('');
+        sessionStorage.removeItem('token');
+    }
     return (
         <div>
-            <Navbar variant="dark" expand="lg">
-                <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+            <Navbar variant="dark" expand="md">
+                <Navbar.Brand as={Link} to="/">ROAD RIDERS</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                     <Nav>
@@ -16,7 +23,10 @@ const NavigationBar = () => {
                         <Nav.Link className="nav-style" href="#service">Service</Nav.Link>
                         <Nav.Link className="nav-style" as={Link} to="/admin">Admin</Nav.Link>
                         <Nav.Link className="nav-style" href="#contact">Contact Us</Nav.Link>
-                        <Nav.Link className="nav-style nav-end" as={Link} to="/login">Login</Nav.Link>
+                        {
+                            loggedInUser.email || sessionStorage.getItem('token') ? <Nav.Link onClick={handleSingOut} className="nav-style nav-end" as={Link} to="/">Sign Out</Nav.Link>
+                            : <Nav.Link className="nav-style nav-end" as={Link} to="/login">Login</Nav.Link>
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
