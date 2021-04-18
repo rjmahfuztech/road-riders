@@ -9,14 +9,18 @@ import Footer from '../Footer/Footer';
 
 const Home = () => {
     return (
-        <div className="">
+        <div>
             <Header></Header>
-            <Service></Service>
-            <Blog></Blog>
-            <OurCompany></OurCompany>
-            <Testimonial></Testimonial>
+            <div className="container-fluid">
+                <Service></Service>
+                <Blog></Blog>
+                <OurCompany></OurCompany>
+                <Testimonial></Testimonial>
+            </div>
             <Contact></Contact>
-            <Footer></Footer>
+            <div className="container-fluid">
+                <Footer></Footer>
+            </div>
         </div>
     );
 };

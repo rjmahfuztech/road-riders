@@ -54,9 +54,9 @@ function App() {
           <PrivateRoute path="/book/:ById">
             <Book />
           </PrivateRoute>
-          {/* <PrivateRoute path="/book">
+          <PrivateRoute path="/book">
             <Book />
-          </PrivateRoute> */}
+          </PrivateRoute>
           <PrivateRoute path="/bookingList">
             <BookingList />
           </PrivateRoute>
