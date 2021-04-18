@@ -11,7 +11,7 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/isAdmin', {
+        fetch('https://fathomless-cliffs-04770.herokuapp.com/isAdmin', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

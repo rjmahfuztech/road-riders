@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-// import { useForm } from "react-hook-form";
 import { UserContext } from '../../../App';
 import Sidebar from '../Sheared/Sidebar/Sidebar';
 import ProcessPayment from '../PaymentSystem/ProcessPayment/ProcessPayment';
@@ -18,13 +17,8 @@ const Book = () => {
         description
     };
 
-    // const { register, handleSubmit, formState: { errors } } = useForm();
-    // const onSubmit = data => {
-    //     console.log(data)
-    // };
-
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${ById}`)
+        fetch(`https://fathomless-cliffs-04770.herokuapp.com/service/${ById}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [ById]);
@@ -32,7 +26,7 @@ const Book = () => {
     const handlePaymentSystem = paymentId => {
         const bookingData = { ...loggedInUser, OrderInfo, paymentId, orderTime: new Date() };
 
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://fathomless-cliffs-04770.herokuapp.com/addOrder', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -54,22 +48,6 @@ const Book = () => {
                 </div>
                 <div className="col-md-9">
                 <h3 className="mb-5">Book Now</h3>
-                    {/* <form onSubmit={handleSubmit(onSubmit)}>
-                        <input className="form-control" name="name" defaultValue={name} ref={register({ required: true })} />
-                        {errors.name && <span>This field is required</span>}
-                        <br />
-                        <input className="form-control" name="email" defaultValue={email} ref={register({ required: true })} />
-                        {errors.email && <span>This field is required</span>}
-                        <br />
-                        <input className="form-control" name="serviceTitle" defaultValue={title} ref={register({ required: true })} />
-                        {errors.serviceTitle && <span>This field is required</span>}
-                        <br />
-                        <div className="text-right">
-                            <div className="btn-bg-color">
-                                <button className="btn btn-style text-white" type="submit">Submit</button>
-                            </div>
-                        </div>
-                    </form> */}
                     <div>
                         <input type="text" className="form-control" defaultValue={name} />
                         <br />

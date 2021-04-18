@@ -8,7 +8,7 @@ const BookingList = () => {
     const [bookingData, setBookingData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orderByEmail', {
+        fetch('https://fathomless-cliffs-04770.herokuapp.com/orderByEmail', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

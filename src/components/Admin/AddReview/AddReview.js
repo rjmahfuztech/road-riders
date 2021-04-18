@@ -13,7 +13,7 @@ const AddReview = () => {
             img: imageURL
         };
 
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://fathomless-cliffs-04770.herokuapp.com/addReview', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

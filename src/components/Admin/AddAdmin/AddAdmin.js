@@ -5,7 +5,7 @@ const AddAdmin = () => {
     const [adminInfo, setAdminInfo] = useState({});
 
     const handleAdmin = event => {
-        fetch('http://localhost:5000/addAdmin', {
+        fetch('https://fathomless-cliffs-04770.herokuapp.com/addAdmin', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

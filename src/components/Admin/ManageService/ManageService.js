@@ -8,13 +8,13 @@ const ManageService = () => {
     const [manageService, setManageService] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://fathomless-cliffs-04770.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setManageService(data));
     }, []);
 
     const handleService = (event, id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://fathomless-cliffs-04770.herokuapp.com/delete/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
