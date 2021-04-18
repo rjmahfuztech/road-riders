@@ -49,10 +49,12 @@ const Login = () => {
     }
 
     return (
-        <div className="container text-center margin d-flex justify-content-center">
-            <div className="login-style">
-                <h2 className="mb-4">Continue with google</h2>
-                <button className="button-style" onClick={handleGoogleSignIn}><FontAwesomeIcon icon={faGooglePlusG} /> Google</button>
+        <div className="container">
+            <div className="margin text-center">
+                <div className="login-style">
+                    <h2 className="mb-4">Continue with google</h2>
+                    <button className="button-style" onClick={handleGoogleSignIn}><FontAwesomeIcon icon={faGooglePlusG} /> Google</button>
+                </div>
             </div>
         </div>
     );
