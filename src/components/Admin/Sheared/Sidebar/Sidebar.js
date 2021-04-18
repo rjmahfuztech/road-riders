@@ -24,7 +24,7 @@ const Sidebar = () => {
     }, []);
 
     return (
-        <div style={{height: '100vh'}} className="sidebar-style">
+        <div className="sidebar-style">
             <ul className="list-unstyled">
                 <li>
                     <Link className="link" to="/home"><FontAwesomeIcon className="icon" icon={faHome} /> Home</Link>
