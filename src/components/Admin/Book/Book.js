@@ -34,30 +34,32 @@ const Book = () => {
             body: JSON.stringify(bookingData)
         })
             .then(result => {
-                if(result){
+                if (result) {
                     alert('Your ordered placed successfully')
                 }
             })
     }
 
     return (
-        <div className="container margin">
-            <div className="row">
-                <div className="col-md-3">
-                    <Sidebar></Sidebar>
-                </div>
-                <div className="col-md-9">
-                <h3 className="mb-5">Book Now</h3>
-                    <div>
-                        <input type="text" className="form-control" defaultValue={name} />
-                        <br />
-                        <input type="text" className="form-control" defaultValue={email} />
-                        <br />
-                        <input type="text" className="form-control" defaultValue={title} />
+        <div className="container">
+            <div className="margin">
+                <div className="row">
+                    <div className="col-md-3">
+                        <Sidebar></Sidebar>
                     </div>
-                    <div className="mt-4">
-                        <h2>Start Payment</h2>
-                        <ProcessPayment price={price} handlePayment={handlePaymentSystem}></ProcessPayment>
+                    <div className="col-md-9">
+                        <h3 className="mb-5">Book Now</h3>
+                        <div>
+                            <input type="text" className="form-control" defaultValue={name} />
+                            <br />
+                            <input type="text" className="form-control" defaultValue={email} />
+                            <br />
+                            <input type="text" className="form-control" defaultValue={title} />
+                        </div>
+                        <div className="mt-4">
+                            <h2>Start Payment</h2>
+                            <ProcessPayment price={price} handlePayment={handlePaymentSystem}></ProcessPayment>
+                        </div>
                     </div>
                 </div>
             </div>
