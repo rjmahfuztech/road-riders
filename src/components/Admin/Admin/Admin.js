@@ -22,7 +22,7 @@ const Admin = () => {
     }, []);
     
     return (
-        <div>
+        <div className="container">
             {
                 isAdmin ? <OrderList></OrderList> : <BookingList></BookingList>
             }
