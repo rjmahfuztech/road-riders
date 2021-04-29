@@ -12,7 +12,7 @@ const BookingListInfo = ({ book }) => {
                         <img style={{ height: '70px' }} src={`data:image/jpeg;base64,${image.img}`} alt="" />
                     </div>
                     <div>
-                        <span>Pending</span>
+                        <span>{book.orderStatus}</span>
                     </div>
                 </div>
                 <h4>{ServiceName}</h4>

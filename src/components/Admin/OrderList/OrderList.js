@@ -10,6 +10,8 @@ const OrderList = () => {
             .then(data => setAllOrders(data));
     }, []);
 
+
+
     return (
         <div className="container">
             <div className="margin">
@@ -19,6 +21,9 @@ const OrderList = () => {
                     </div>
                     <div className="col-md-10">
                         <h2 className="mb-5">Order List</h2>
+                        <div id="up">
+
+                        </div>
                         <div>
                             {
                                 allOrders.length ?
@@ -46,6 +51,8 @@ const OrderList = () => {
                                                                 <option value="On going">On going</option>
                                                                 <option value="Done">Done</option>
                                                             </select>
+                                                            {/* {orders.orderStatus} */}
+                                                            
                                                         </td>
                                                     </tr>
                                                 )

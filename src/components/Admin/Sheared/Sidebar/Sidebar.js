@@ -49,10 +49,10 @@ const Sidebar = () => {
                     :
                     <ul className="list-unstyled">
                         <li>
-                            <Link className="link" to="/book"><FontAwesomeIcon className="icon" icon={faCartPlus} /> Book</Link>
+                            <Link className="link" to="/home"><FontAwesomeIcon className="icon" icon={faCartPlus} /> Book Another</Link>
                         </li>
                         <li>
-                            <Link className="link" to="/bookingList"><FontAwesomeIcon className="icon" icon={faClipboardList} /> Book List</Link>
+                            <Link className="link" to="/bookingList"><FontAwesomeIcon className="icon" icon={faClipboardList} /> Booking List</Link>
                         </li>
                         <li>
                             <Link className="link" to="/review"><FontAwesomeIcon className="icon" icon={faComment} /> Review</Link>

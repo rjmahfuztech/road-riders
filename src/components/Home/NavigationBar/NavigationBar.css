@@ -1,9 +1,10 @@
 .nav-style{
     color: rgb(200, 232, 236) !important;
     margin-right: 20px;
+    transition: 0.2s;
 }
 .nav-style:hover{
-    color: rgb(92, 110, 112) !important;
+    color: #f60 !important;
 }
 .nav-end{
     margin-right: 60px;

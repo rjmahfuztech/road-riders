@@ -7,9 +7,11 @@ import ProcessPayment from '../PaymentSystem/ProcessPayment/ProcessPayment';
 const Book = () => {
     const [service, setService] = useState({});
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [orderStatus, setOrderStatus] = useState('Pending');
     const { ById } = useParams();
     const { name, email } = loggedInUser;
     const { title, price, image, description } = service;
+
     const OrderInfo = {
         ServiceName: title,
         price,
@@ -24,7 +26,7 @@ const Book = () => {
     }, [ById]);
 
     const handlePaymentSystem = paymentId => {
-        const bookingData = { ...loggedInUser, OrderInfo, paymentId, orderTime: new Date() };
+        const bookingData = { ...loggedInUser, OrderInfo, orderStatus, paymentId, orderTime: new Date() };
 
         fetch('https://fathomless-cliffs-04770.herokuapp.com/addOrder', {
             method: "POST",

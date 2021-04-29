@@ -20,7 +20,7 @@ const Admin = () => {
             .then(data => setIsAdmin(data));
 
     }, []);
-    
+
     return (
         <div>
             {
