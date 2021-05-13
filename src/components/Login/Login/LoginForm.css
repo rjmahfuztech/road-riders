@@ -1,0 +1,28 @@
+.login-form-style{
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px rgb(218, 203, 203);
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+.login-form-style .toggle-sign-in-login{
+    color: rgb(255, 145, 0);
+    cursor: pointer;
+    font-weight: 500;
+}
+.login-form-style .or{
+    font-weight: 500;
+}
+
+@media (max-width:768px){
+    .login-form-style{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:480px){
+    .login-form-style{
+        width: 100%;
+    }
+}

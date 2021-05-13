@@ -2,14 +2,15 @@ import React, { useContext } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
+import { signOut } from '../../Login/Login/LoginManager';
 import './NavigationBar.css';
 
 const NavigationBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const handleSingOut = () => {
+        signOut();
         setLoggedInUser('');
-        sessionStorage.removeItem('token');
     }
     return (
         <div>
@@ -24,7 +25,7 @@ const NavigationBar = () => {
                         <Nav.Link className="nav-style" as={Link} to="/admin">Admin</Nav.Link>
                         <Nav.Link className="nav-style" href="#contact">Contact Us</Nav.Link>
                         {
-                            loggedInUser.email || sessionStorage.getItem('token') ? <Nav.Link onClick={handleSingOut} className="nav-style nav-end" as={Link} to="/">Sign Out</Nav.Link>
+                            loggedInUser.email ? <Nav.Link onClick={handleSingOut} className="nav-style nav-end" as={Link} to="/">Sign Out</Nav.Link>
                             : <Nav.Link className="nav-style nav-end" as={Link} to="/login">Login</Nav.Link>
                         }
                     </Nav>

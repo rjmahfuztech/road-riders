@@ -9,7 +9,7 @@ const Book = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [orderStatus, setOrderStatus] = useState('Pending');
     const { ById } = useParams();
-    const { name, email } = loggedInUser;
+    const { displayName, email } = loggedInUser;
     const { title, price, image, description } = service;
 
     const OrderInfo = {
@@ -41,6 +41,7 @@ const Book = () => {
                 }
             })
     }
+    console.log('test', loggedInUser);
 
     return (
         <div className="container">
@@ -52,7 +53,7 @@ const Book = () => {
                     <div className="col-md-9">
                         <h3 className="mb-5">Book Now</h3>
                         <div>
-                            <input type="text" className="form-control" defaultValue={name} />
+                            <input type="text" className="form-control" defaultValue={displayName} />
                             <br />
                             <input type="text" className="form-control" defaultValue={email} />
                             <br />

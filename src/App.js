@@ -1,5 +1,7 @@
 import './App.css';
 import Home from './components/Home/Home/Home';
+import firebase from "firebase/app";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,7 +9,7 @@ import {
 } from "react-router-dom";
 import Admin from './components/Admin/Admin/Admin';
 import Login from './components/Login/Login/Login';
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import NotFound from './components/NotFound/NotFound';
 import AddService from './components/Admin/AddService/AddService';
 import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
@@ -17,12 +19,24 @@ import BookingList from './components/Admin/BookingList/BookingList';
 import OrderList from './components/Admin/OrderList/OrderList';
 import ManageService from './components/Admin/ManageService/ManageService';
 import AddReview from './components/Admin/AddReview/AddReview';
+import { firebaseInitialize } from './components/Login/Login/LoginManager';
 
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  
+
+  useEffect(() => {
+    firebaseInitialize();
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        setLoggedInUser(user);
+      } else {
+        setLoggedInUser('');
+      }
+    });
+  }, []);
+
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>

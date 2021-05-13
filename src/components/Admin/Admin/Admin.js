@@ -19,7 +19,7 @@ const Admin = () => {
             .then(res => res.json())
             .then(data => setIsAdmin(data));
 
-    }, []);
+    }, [loggedInUser.email]);
 
     return (
         <div>

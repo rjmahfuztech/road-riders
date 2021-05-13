@@ -29,35 +29,32 @@ const Sidebar = () => {
                 <li>
                     <Link className="link" to="/home"><FontAwesomeIcon className="icon" icon={faHome} /> Home</Link>
                 </li>
+                <li>
+                    <Link className="link" to="/home"><FontAwesomeIcon className="icon" icon={faCartPlus} /> Book Another</Link>
+                </li>
+                <li>
+                    <Link className="link" to="/bookingList"><FontAwesomeIcon className="icon" icon={faClipboardList} /> Booking List</Link>
+                </li>
+                <li>
+                    <Link className="link" to="/review"><FontAwesomeIcon className="icon" icon={faComment} /> Review</Link>
+                </li>
             </ul>
             {
-                isAdmin ?
-                    <ul className="list-unstyled">
-                        <li>
-                            <Link className="link" to="/orders"><FontAwesomeIcon className="icon" icon={faClipboardList} /> Order List</Link>
-                        </li>
-                        <li>
-                            <Link className="link" to="/addService"><FontAwesomeIcon className="icon" icon={faPlusSquare} /> Add Service</Link>
-                        </li>
-                        <li>
-                            <Link className="link" to="/addAdmin"><FontAwesomeIcon className="icon" icon={faUserPlus} /> Add Admin</Link>
-                        </li>
-                        <li>
-                            <Link className="link" to="/manage"><FontAwesomeIcon className="icon" icon={faTh} /> Manage Service</Link>
-                        </li>
-                    </ul>
-                    :
-                    <ul className="list-unstyled">
-                        <li>
-                            <Link className="link" to="/home"><FontAwesomeIcon className="icon" icon={faCartPlus} /> Book Another</Link>
-                        </li>
-                        <li>
-                            <Link className="link" to="/bookingList"><FontAwesomeIcon className="icon" icon={faClipboardList} /> Booking List</Link>
-                        </li>
-                        <li>
-                            <Link className="link" to="/review"><FontAwesomeIcon className="icon" icon={faComment} /> Review</Link>
-                        </li>
-                    </ul>
+                isAdmin &&
+                <ul className="list-unstyled">
+                    <li>
+                        <Link className="link" to="/orders"><FontAwesomeIcon className="icon" icon={faClipboardList} /> Order List</Link>
+                    </li>
+                    <li>
+                        <Link className="link" to="/addService"><FontAwesomeIcon className="icon" icon={faPlusSquare} /> Add Service</Link>
+                    </li>
+                    <li>
+                        <Link className="link" to="/addAdmin"><FontAwesomeIcon className="icon" icon={faUserPlus} /> Add Admin</Link>
+                    </li>
+                    <li>
+                        <Link className="link" to="/manage"><FontAwesomeIcon className="icon" icon={faTh} /> Manage Service</Link>
+                    </li>
+                </ul>
             }
         </div>
     );
