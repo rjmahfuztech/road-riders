@@ -13,6 +13,10 @@
 .login-form-style .or{
     font-weight: 500;
 }
+.login-form-style .btn{
+    width: 100% !important;
+    height: 38px !important;
+}
 
 @media (max-width:768px){
     .login-form-style{
