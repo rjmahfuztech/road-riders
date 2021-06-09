@@ -13,24 +13,21 @@ const NavigationBar = () => {
     setLoggedInUser("");
   };
   return (
-    <Navbar collapseOnSelect variant="dark" expand="md">
+    <Navbar collapseOnSelect expand="md" variant="dark">
       <Navbar.Brand as={Link} to="/">
         ROAD RIDERS
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse
-        className="justify-content-end"
-        id="responsive-navbar-nav"
-      >
-        <Nav>
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="ml-auto">
           <Nav.Link className="nav-style" as={Link} to="/">
             Home
           </Nav.Link>
-          <Nav.Link className="nav-style" href="#blog">
-            Blog
-          </Nav.Link>
           <Nav.Link className="nav-style" href="#service">
             Service
+          </Nav.Link>
+          <Nav.Link className="nav-style" href="#blog">
+            Blog
           </Nav.Link>
           <Nav.Link className="nav-style" as={Link} to="/admin">
             Admin
