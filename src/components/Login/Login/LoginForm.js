@@ -22,7 +22,7 @@ const LoginForm = ({
           <form onSubmit={handleSubmit}>
             {newUser && (
               <div className="mb-3">
-                <label className="form-label">Your Name kkkk</label>
+                <label className="form-label">Your Name</label>
                 <input
                   type="text"
                   name="name"
