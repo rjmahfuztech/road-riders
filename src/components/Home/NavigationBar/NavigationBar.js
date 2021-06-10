@@ -33,8 +33,8 @@ const NavigationBar = () => {
       fixed="top"
       className={
         isNavbarSticky || isNavbarCollapsed
-          ? "shadow-sm py-2 bg-white text-white"
-          : "py-3"
+          ? "shadow-sm px-4 py-2 bg-white text-white"
+          : "px-4 py-3"
       }
       expand="lg"
       variant="light"
@@ -52,7 +52,7 @@ const NavigationBar = () => {
         aria-controls="responsive-navbar-nav"
       />
       <Navbar.Collapse className={isNavbarCollapsed} id="responsive-navbar-nav">
-        <Nav className="ml-auto">
+        <Nav className="ms-auto">
           <Nav.Link
             onClick={() => window.scrollTo(500, 0)}
             className={navStyle}
