@@ -1,8 +1,8 @@
 import React from "react";
 import "./LoginForm.css";
-import Zoom from "react-reveal/Zoom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGooglePlusG} from "@fortawesome/free-brands-svg-icons";
+import Fade from "react-reveal/Fade";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGooglePlusG } from "@fortawesome/free-brands-svg-icons";
 
 const LoginForm = ({
   handleBlur,
@@ -14,7 +14,7 @@ const LoginForm = ({
 }) => {
   return (
     <div>
-      <Zoom>
+      <Fade>
         <div className="login-form-style">
           <h3 className="text-center mb-4">
             {newUser ? "Create an account" : "Sign In"}
@@ -98,7 +98,7 @@ const LoginForm = ({
             </button>
           </div>
         </div>
-      </Zoom>
+      </Fade>
     </div>
   );
 };

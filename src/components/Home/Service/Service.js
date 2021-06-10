@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Spinner} from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import ServiceInfo from "../ServiceInfo/ServiceInfo";
 
 const Service = () => {
@@ -26,7 +26,7 @@ const Service = () => {
             <Spinner animation="border" variant="success" />
           )}
         </div>
-        <div className="row p-3">
+        <div className="row">
           {serviceData.map((service, index) => (
             <ServiceInfo key={index} service={service}></ServiceInfo>
           ))}

@@ -1,51 +1,95 @@
-import React, {useContext} from "react";
-import {Nav, Navbar} from "react-bootstrap";
-import {Link} from "react-router-dom";
-import {UserContext} from "../../../App";
-import {signOut} from "../../Login/Login/LoginManager";
+import React, { useContext, useEffect, useState } from "react";
+import { Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { UserContext } from "../../../App";
+import { signOut } from "../../Login/Login/LoginManager";
 import "./NavigationBar.css";
 
 const NavigationBar = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [isNavbarSticky, setIsNavbarSticky] = useState(false);
+  const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(null);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        setIsNavbarSticky(true);
+      } else {
+        setIsNavbarSticky(false);
+      }
+    });
+  }, []);
+
+  const navStyle = `${
+    isNavbarSticky || isNavbarCollapsed ? "nav-style-sticky" : "nav-style"
+  }`;
 
   const handleSingOut = () => {
     signOut();
     setLoggedInUser("");
   };
   return (
-    <Navbar collapseOnSelect expand="md" variant="dark">
-      <Navbar.Brand as={Link} to="/">
+    <Navbar
+      fixed="top"
+      className={
+        isNavbarSticky || isNavbarCollapsed
+          ? "shadow-sm py-2 bg-white text-white"
+          : "py-3"
+      }
+      expand="lg"
+      variant="light"
+    >
+      <Navbar.Brand
+        onClick={() => window.scrollTo(500, 0)}
+        className={navStyle}
+        as={Link}
+        to="/"
+      >
         ROAD RIDERS
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
+      <Navbar.Toggle
+        onClick={() => setIsNavbarCollapsed(!isNavbarCollapsed ? "show" : null)}
+        aria-controls="responsive-navbar-nav"
+      />
+      <Navbar.Collapse className={isNavbarCollapsed} id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link className="nav-style" as={Link} to="/">
+          <Nav.Link
+            onClick={() => window.scrollTo(500, 0)}
+            className={navStyle}
+            as={Link}
+            to="/"
+          >
             Home
           </Nav.Link>
-          <Nav.Link className="nav-style" href="#service">
+          <Nav.Link className={navStyle} href="#service">
             Service
           </Nav.Link>
-          <Nav.Link className="nav-style" href="#blog">
+          <Nav.Link className={navStyle} href="#blog">
             Blog
           </Nav.Link>
-          <Nav.Link className="nav-style" as={Link} to="/admin">
-            Admin
+          <Nav.Link className={navStyle} href="#about">
+            About
           </Nav.Link>
-          <Nav.Link className="nav-style" href="#contact">
+          <Nav.Link className={navStyle} href="#testimonial">
+            Reviews
+          </Nav.Link>
+          <Nav.Link className={navStyle} as={Link} to="/admin">
+            Dashboard
+          </Nav.Link>
+          <Nav.Link className={navStyle} href="#contact">
             Contact Us
           </Nav.Link>
           {loggedInUser.email ? (
             <Nav.Link
               onClick={handleSingOut}
-              className="nav-style nav-end"
+              className={navStyle}
               as={Link}
               to="/"
             >
               Sign Out
             </Nav.Link>
           ) : (
-            <Nav.Link className="nav-style nav-end" as={Link} to="/login">
+            <Nav.Link className={navStyle} as={Link} to="/login">
               Login
             </Nav.Link>
           )}

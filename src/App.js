@@ -1,25 +1,20 @@
-import './App.css';
-import Home from './components/Home/Home/Home';
+import Home from "./components/Home/Home/Home";
 import firebase from "firebase/app";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import Admin from './components/Admin/Admin/Admin';
-import Login from './components/Login/Login/Login';
-import { createContext, useEffect, useState } from 'react';
-import NotFound from './components/NotFound/NotFound';
-import AddService from './components/Admin/AddService/AddService';
-import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
-import Book from './components/Admin/Book/Book';
-import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
-import BookingList from './components/Admin/BookingList/BookingList';
-import OrderList from './components/Admin/OrderList/OrderList';
-import ManageService from './components/Admin/ManageService/ManageService';
-import AddReview from './components/Admin/AddReview/AddReview';
-import { firebaseInitialize } from './components/Login/Login/LoginManager';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Admin from "./components/Admin/Admin/Admin";
+import Login from "./components/Login/Login/Login";
+import { createContext, useEffect, useState } from "react";
+import NotFound from "./components/NotFound/NotFound";
+import AddService from "./components/Admin/AddService/AddService";
+import AddAdmin from "./components/Admin/AddAdmin/AddAdmin";
+import Book from "./components/Admin/Book/Book";
+import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
+import BookingList from "./components/Admin/BookingList/BookingList";
+import OrderList from "./components/Admin/OrderList/OrderList";
+import ManageService from "./components/Admin/ManageService/ManageService";
+import AddReview from "./components/Admin/AddReview/AddReview";
+import { firebaseInitialize } from "./components/Login/Login/LoginManager";
 
 export const UserContext = createContext();
 
@@ -32,7 +27,7 @@ function App() {
       if (user) {
         setLoggedInUser(user);
       } else {
-        setLoggedInUser('');
+        setLoggedInUser("");
       }
     });
   }, []);

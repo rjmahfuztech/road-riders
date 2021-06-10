@@ -1,17 +1,18 @@
-.nav-style{
-    color: rgb(200, 232, 236) !important;
-    margin-right: 20px;
-    transition: 0.2s;
+.nav-style {
+  color: rgb(200, 232, 236) !important;
+  margin-right: 20px;
+  transition: 0.2s;
+  font-weight: 500;
 }
-.nav-style:hover{
-    color: #f60 !important;
+.nav-style-sticky {
+  color: black !important;
+  margin-right: 20px;
+  transition: 0.2s;
+  font-weight: 500;
 }
-.nav-end{
-    margin-right: 60px;
+.nav-style:hover {
+  color: #f60 !important;
 }
-
-@media (max-width: 1391px){
-    .nav-end{
-        margin-right: 20px;
-    }
+.nav-style-sticky:hover {
+  color: #f60 !important;
 }
