@@ -65,7 +65,7 @@ const LoginForm = ({
               {newUser ? "Account created" : "User Logged In"} successfully
             </p>
           )}
-          <div className="mt-3 text-right">
+          <div className="mt-3 text-end">
             {newUser ? (
               <p>
                 Already have an account ?{" "}
