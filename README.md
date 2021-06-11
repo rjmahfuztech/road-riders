@@ -1,40 +1,31 @@
-# Welcome to my ROAD RIDERS app.
+# Doctor Portals
 
-This is my ROAD RIDERS app live link [https://roadriders1.netlify.app/](https://roadriders1.netlify.app/).
+<a href="https://doctor-portals.netlify.app/">
+  <img width="100%" height="100%" src="src/images/doctor.JPG">
+</a>
 
-## About This App
+[visit website](https://doctor-portals.netlify.app/) | [live API server](https://vast-gorge-08839.herokuapp.com/)
 
-This project have total of 7 section.
+### Features
 
-1/ Header
-2/ Service
-3/ Blog
-4/ Company news
-5/ Testimonial
-6/ Contact
-7/ Footer
+1. Authentication system with google.
+2. An authentication person can get service.
+3. Different Admin Panel and User Panel
+4. Admin can add new service and manage service.
+5. A admin also can make a new admin.
 
-### Header
-The header section has an background image and some text on it.
+### Front-End Technology
 
-### Service
-There are a few cards in the service section. If a user clicks on a card, it will
-take you to the order page above the login.
+- React.js
+- JavaScript
+- CSS3
+- Bootstrap
 
-### Blog
-The blog section has product related blogs.
+### Back-End technology
 
-### Company news
-This section contains all the latest information about the company.
+- Node.js
+- MongoDB(database)
+- Express.js
+- Heroku
 
-### Testimonial
-This section contains all client reviews.
-
-### Contact
-In this section anyone can contact us.
-
-### Footer
-This section contains information to our services, our products and our address.
-
-### This App has a Admin panel.
-
+  [view back-end code](https://github.com/rjmahfuztech/doctor-portals-server)
