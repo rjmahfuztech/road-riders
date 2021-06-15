@@ -6,13 +6,13 @@ import Zoom from "react-reveal/Zoom";
 const HeaderMain = () => {
   return (
     <div className="overflow-hidden">
-      <Zoom>
+      <Zoom duration={2000}>
         <div className="row header-main-container justify-content-center align-items-center">
           <div className="col-md-5 offset-md-1 mb-3 text-white">
             <h1>
               <span className="color">BEST CYCLING</span> EXPERIENCE
             </h1>
-            <Zoom left cascade>
+            <Zoom right cascade>
               <p>
                 BECOME THE WORLD LEADER ON THE INTERNET FOR THE SPORT OF
                 CYCLING.

@@ -4,6 +4,7 @@ import blog1 from "../../../images/blog1.JPG";
 import blog2 from "../../../images/blog2.JPG";
 import blog3 from "../../../images/blog3.JPG";
 import BlogInfo from "../BlogInfo/BlogInfo";
+import Fade from "react-reveal/Fade";
 
 const blogData = [
   {
@@ -23,12 +24,14 @@ const blogData = [
 const Blog = () => {
   return (
     <div id="blog">
-      <div className="margin text-center">
-        <h5 className="h5-color">
-          <span className="color">OUR</span> BLOG
-        </h5>
-        <h2>LATEST FROM BLOG</h2>
-      </div>
+      <Fade duration={2200} bottom>
+        <div className="margin text-center">
+          <h5 className="h5-color">
+            <span className="color">OUR</span> BLOG
+          </h5>
+          <h2>LATEST FROM BLOG</h2>
+        </div>
+      </Fade>
       <div className="width-maintain">
         <div className="row">
           {blogData.map((blog, index) => (

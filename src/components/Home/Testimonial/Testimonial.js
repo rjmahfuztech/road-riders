@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TestimonialInfo from "../TestimonialInfo/TestimonialInfo";
+import Fade from "react-reveal/Fade";
 import "swiper/swiper.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
@@ -24,62 +25,67 @@ const Testimonial = () => {
 
   return (
     <div id="testimonial">
-      <div className="text-center margin">
-        <h5>
-          <span className="color">OUR</span> TESTIMONIAL
-        </h5>
-        <h2>WHAT OUR CLIENTS SAY</h2>
-      </div>
-      <div className="width-maintain">
-        <div className="text-center">
-          {reviewData.length === 0 && (
+      <Fade duration={2200} bottom>
+        {reviewData.length === 0 ? (
+          <div className="text-center">
             <Spinner animation="border" variant="success" />
-          )}
-        </div>
-        <div>
-          <Swiper
-            loop={true}
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={1}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: false,
-            }}
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
-            }}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-          >
-            {reviewData.map((review) => {
-              return (
-                <SwiperSlide key={review._id}>
-                  <TestimonialInfo review={review}></TestimonialInfo>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
-      </div>
+          </div>
+        ) : (
+          <div>
+            <div className="text-center margin">
+              <h5>
+                <span className="color">OUR</span> TESTIMONIAL
+              </h5>
+              <h2>WHAT OUR CLIENTS SAY</h2>
+            </div>
+            <div className="width-maintain">
+              <div>
+                <Swiper
+                  loop={true}
+                  effect={"coverflow"}
+                  grabCursor={true}
+                  centeredSlides={true}
+                  slidesPerView={1}
+                  coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: false,
+                  }}
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 1,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                    },
+                  }}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  navigation={true}
+                >
+                  {reviewData.map((review) => {
+                    return (
+                      <SwiperSlide key={review._id}>
+                        <TestimonialInfo review={review}></TestimonialInfo>
+                      </SwiperSlide>
+                    );
+                  })}
+                </Swiper>
+              </div>
+            </div>
+          </div>
+        )}
+      </Fade>
     </div>
   );
 };
