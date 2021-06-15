@@ -4,14 +4,16 @@ import Fade from "react-reveal/Fade";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGooglePlusG } from "@fortawesome/free-brands-svg-icons";
 
-const LoginForm = ({
-  handleBlur,
-  handleSubmit,
-  user,
-  handleGoogleSignIn,
-  newUser,
-  setNewUser,
-}) => {
+const LoginForm = (props) => {
+  const {
+    handleBlur,
+    handleSubmit,
+    user,
+    handleGoogleSignIn,
+    newUser,
+    setNewUser,
+    loginError,
+  } = props;
   return (
     <div>
       <Fade>
@@ -43,6 +45,11 @@ const LoginForm = ({
                 placeholder="Enter your email"
                 required
               />
+              {loginError.email && (
+                <p className="text-warning">
+                  Please enter {newUser ? "a valid" : "your"} email!!!
+                </p>
+              )}
             </div>
             <div className="mb-3">
               <label className="form-label">Password</label>
@@ -54,6 +61,13 @@ const LoginForm = ({
                 placeholder="Enter your password"
                 required
               />
+              {loginError.password && (
+                <p className="text-warning">
+                  {newUser
+                    ? "Your password must have 1 uppercase, lowercase, number a special character and at least 8!!!"
+                    : "Please enter your password"}
+                </p>
+              )}
             </div>
             <button type="submit" className="btn btn-primary">
               {newUser ? "Sign Up" : "Login"}
